@@ -1,0 +1,138 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for the techy vibe */
+    color: #fff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.feed {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.post {
+    background-color: #000000;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Ensuring monospace font is used */
+}
+
+.user-info, .comments, .comment-form input, .comment-form button {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for consistency */
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username, .user-details strong, .user-details span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    margin-right: 8px;
+    background-color: #222;
+    color: #fff;
+}
+
+.comment-form button {
+    background-color: #1a1c1f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.reaction {
+    background-color: #000; /* Black background for the like button */
+    color: #fff; /* White text for visibility */
+    border: 1px solid #fff; /* White border to make the button stand out */
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.reaction:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+    color: #ddd; /* Slightly darker white for text */
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Ensures the image fits well within the circle */
+}
+
+.username, .user-details strong {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace; /* Applies monospace font */
+    margin: 0; /* Resets any default margin */
+    display: inline-block; /* Ensures inline behavior with alignment */
+    vertical-align: middle; /* Aligns text vertically in the middle */
+}
+/* Existing styles */
+
+/* Wiggle effect on hover */
+p:hover {
+    animation: wiggle 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+/* Like button styles */
+.reaction {
+    /* Existing styles */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.reaction.active {
+    background-color: #007bff; /* Or any color you prefer when active */
+    color: #fff;
+    transform: scale(1.1); /* Slightly enlarges the button */
+}
